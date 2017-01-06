@@ -24,24 +24,30 @@ class ViewController: UITableViewController {
     }
     
     //
-    
+    DispatchQueue.global(qos: .userInitiated).async {
+      [unowned self] in
+      
     if let url = URL(string: urlString){
       if let data = try? Data(contentsOf: url){
         let json = JSON(data: data)
         if json["metadata"]["responseInfo"]["status"].intValue == 200{
           // we're ok to parse
-          parse(json: json)
+          self.parse(json: json)
           return
         }
       }
     }
-    showError()
+    self.showError()
+    } // end of aync
+  
   }
   
   func showError(){
-    let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed. Please check your Internet connection and try again", preferredStyle: .alert)
-    ac.addAction(UIAlertAction(title: "OK", style: .default))
-    present(ac, animated: true)
+    DispatchQueue.main.async {[unowned self] in
+      let ac = UIAlertController(title: "Loading error", message: "There was a problem loading the feed. Please check your Internet connection and try again", preferredStyle: .alert)
+      ac.addAction(UIAlertAction(title: "OK", style: .default))
+      self.present(ac, animated: true)
+    }
   }
   
   func parse(json: JSON){
@@ -54,7 +60,10 @@ class ViewController: UITableViewController {
       petitions.append(obj)
       
     }
-    tableView.reloadData()
+    DispatchQueue.main.async { [unowned self] in
+      self.tableView.reloadData()
+    }
+    
     
   }
   
