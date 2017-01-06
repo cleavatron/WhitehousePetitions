@@ -12,6 +12,8 @@
 		846FE78C1E1B9B86008C7DBF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846FE78A1E1B9B86008C7DBF /* Main.storyboard */; };
 		846FE78E1E1B9B86008C7DBF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 846FE78D1E1B9B86008C7DBF /* Assets.xcassets */; };
 		846FE7911E1B9B86008C7DBF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 846FE78F1E1B9B86008C7DBF /* LaunchScreen.storyboard */; };
+		846FE7991E1C0C3B008C7DBF /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FE7981E1C0C3B008C7DBF /* SwiftyJSON.swift */; };
+		846FE79B1E1D5114008C7DBF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846FE79A1E1D5114008C7DBF /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		846FE78D1E1B9B86008C7DBF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		846FE7901E1B9B86008C7DBF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		846FE7921E1B9B86008C7DBF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		846FE7981E1C0C3B008C7DBF /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		846FE79A1E1D5114008C7DBF /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,10 +60,12 @@
 			children = (
 				846FE7861E1B9B86008C7DBF /* AppDelegate.swift */,
 				846FE7881E1B9B86008C7DBF /* ViewController.swift */,
+				846FE7981E1C0C3B008C7DBF /* SwiftyJSON.swift */,
 				846FE78A1E1B9B86008C7DBF /* Main.storyboard */,
 				846FE78D1E1B9B86008C7DBF /* Assets.xcassets */,
 				846FE78F1E1B9B86008C7DBF /* LaunchScreen.storyboard */,
 				846FE7921E1B9B86008C7DBF /* Info.plist */,
+				846FE79A1E1D5114008C7DBF /* DetailViewController.swift */,
 			);
 			path = "Whitehouse Petitions";
 			sourceTree = "<group>";
@@ -137,8 +143,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				846FE7991E1C0C3B008C7DBF /* SwiftyJSON.swift in Sources */,
 				846FE7891E1B9B86008C7DBF /* ViewController.swift in Sources */,
 				846FE7871E1B9B86008C7DBF /* AppDelegate.swift in Sources */,
+				846FE79B1E1D5114008C7DBF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
